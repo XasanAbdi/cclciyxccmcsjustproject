@@ -1,6 +1,7 @@
 import express from "express";
-import User from "../models/Usermodel.js";
+// import User from "../models/Usermodel.js";
 import {getUserprofile, login, register } from "../Controler.js";
+import User from "../models/Usermodel.js";
 
 const UserRouters = express.Router();
 
