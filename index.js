@@ -1,18 +1,18 @@
 import express from 'express'
 import connectDB from './database/db.js'
 import dotenv from 'dotenv'
-import CompanyRouter from './Router/CompanyRouter.js'
-import LeadRouter from './Router/LeadRouter.js'
-import TaskRouter from './Router/TaskRouter.js'
-import MeetRouter from './Router/MeetRouter.js'
-import ContRouter from './Router/ContRouter.js'
-import LostleadRouter from './Router/LostleadRouter.js'
-import OppRouter from './Router/OppRouter.js'
-import EmpRouter from './Router/EmpRouter.js'
-import UserRouter from './Router/UserRouter.js'
-import OrderRouter from './Router/OrderRouter.js'
-import FeedbackRouter from './Router/FeedbackRouter.js'
-import Product_Router from './Router/Product_Router.js'
+import OrderRouters from "./Router/OrderRouter.js";
+import FeedbackRouters from "./Router/FeedbackRouter.js";
+import ProductRouters from "./Router/Product_Router.js";
+import LeadRouters from "./Router/LeadRouter.js";
+import TaskRouters from "./Router/TaskRouter.js";
+import MeetRouters from "./Router/MeetRouter.js";
+import ContactRouters from "./Router/ContRouter.js";
+import LostleadRouters from "./Router/LostleadRouter.js";
+import OppertunityRouters from "./Router/OppRouter.js";
+import EmpRouters from "./Router/EmpRouter.js";
+import CompanyRouters from "./Router/CompanyRouter.js";
+import UserRouters from "./Router/UserRouter.js";
 
 
 dotenv.config();
@@ -21,18 +21,18 @@ const app=express();
 
 app.use(express.json());
 
-app.use('/api/company/',CompanyRouter)
-app.use('/api/lead/',LeadRouter)
-app.use('/api/task/',TaskRouter)
-app.use('/api/meet/',MeetRouter)
-app.use('/api/contact/',ContRouter)
-app.use('/api/lostlead/',LostleadRouter)
-app.use('/api/opp/',OppRouter)
-app.use('/api/emp/',EmpRouter)
-app.use('/api/user/',UserRouter)
-app.use('/api/order/',OrderRouter)
-app.use('/api/feedback/',FeedbackRouter)
-app.use('/api/product/',Product_Router)
+app.use('/api/lead/',LeadRouters)
+app.use('/api/task/',TaskRouters)
+app.use('/api/meet/',MeetRouters)
+app.use('/api/contact/',ContactRouters)
+app.use('/api/lostlead/',LostleadRouters)
+app.use('/api/opp/',OppertunityRouters)
+app.use('/api/emp/',EmpRouters)
+app.use('/api/company/',CompanyRouters)
+app.use('/api/user/',UserRouters)
+app.use('/api/order/',OrderRouters)
+app.use('/api/feedback/',FeedbackRouters)
+app.use('/api/product/',ProductRouters)
 
 
 const prot=process.env.PORT||5000
